@@ -1,0 +1,15 @@
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\bin\Debug\net7.0\Tasks.exe
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\bin\Debug\net7.0\Tasks.deps.json
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\bin\Debug\net7.0\Tasks.runtimeconfig.json
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\bin\Debug\net7.0\Tasks.dll
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\bin\Debug\net7.0\Tasks.pdb
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\obj\Debug\net7.0\Tasks.csproj.AssemblyReference.cache
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\obj\Debug\net7.0\Tasks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\obj\Debug\net7.0\Tasks.AssemblyInfoInputs.cache
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\obj\Debug\net7.0\Tasks.AssemblyInfo.cs
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\obj\Debug\net7.0\Tasks.csproj.CoreCompileInputs.cache
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\obj\Debug\net7.0\Tasks.dll
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\obj\Debug\net7.0\refint\Tasks.dll
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\obj\Debug\net7.0\Tasks.pdb
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\obj\Debug\net7.0\Tasks.genruntimeconfig.cache
+C:\Users\Zenisoft\RiderProjects\Tasks\Tasks\obj\Debug\net7.0\ref\Tasks.dll
