@@ -87,10 +87,13 @@ public class Begin
 
     static string Begin10(float a, float b)
     {
-        float sum = MathF.Sqrt(a) + MathF.Sqrt(b);
-        float difference = MathF.Max(MathF.Sqrt(a), MathF.Sqrt(b)) - MathF.Min(MathF.Sqrt(a), MathF.Sqrt(b));
-        float multiply = MathF.Sqrt(a) * MathF.Sqrt(b);
-        float quotient = MathF.Sqrt(a) / MathF.Sqrt(b);
+        float s_a = MathF.Sqrt(a);
+        float s_b = MathF.Sqrt(b);
+        
+        float sum = s_a + s_b;
+        float difference = MathF.Max(s_a, s_b) - MathF.Min(s_a, s_b);
+        float multiply = s_a * s_b;
+        float quotient = s_a / s_b;
 
         return $"Sum: {sum}, Difference: {difference}, Multiply: {multiply}, Quotient: {quotient}";
     }
@@ -148,8 +151,12 @@ public class Begin
 
     static string Begin17(float A, float B, float C)
     {
-        float AC = C - A;
-        float BC = C - B;
+        float m_a = MathF.Abs(A);
+        float m_b = MathF.Abs(B);
+        float m_c = MathF.Abs(C);
+        
+        float AC = m_c - m_a;
+        float BC = m_c - m_b;
         float sum = AC + BC;
 
         return $"AC: {AC}, BC: {BC}, Sum: {sum}";
@@ -157,10 +164,14 @@ public class Begin
 
     static string Begin18(float A, float B, float C)
     {
+        float m_a = MathF.Abs(A);
+        float m_b = MathF.Abs(B);
+        float m_c = MathF.Abs(C);
+        
         if (A > C && C < B)
         {
-            float AC = C - A;
-            float BC = C - B;
+            float AC = m_c - m_a;
+            float BC = m_c - m_b;
             float product = AC * BC;
 
             return $"AC: {AC}, BC: {BC}, Product: {product}";
@@ -170,8 +181,15 @@ public class Begin
 
     static string Begin19(float x1, float y1, float x2, float y2)
     {
-        float side1 = x2 - x1;
-        float side2 = y2 - y1;
+        float m_x1 = MathF.Abs(x1);
+        float m_x2 = MathF.Abs(x2);
+
+        float m_y1 = MathF.Abs(y1);
+        float m_y2 = MathF.Abs(y2);
+        
+        float side1 = m_x2 - m_x1;
+        float side2 = m_y2 - m_y1;
+        
         float perimeter = 2 * (side1 + side2);
         float area = side1 * side2;
 
