@@ -26,6 +26,16 @@ public class Begin
         Console.WriteLine(Begin18(15, 20, 10));
         Console.WriteLine(Begin19(10, 5, 20, 10));
         Console.WriteLine(Begin20(1, 2, 3, 4));
+        Console.WriteLine(Begin21(0, 0, 5, 5, 10, 0));
+        Console.WriteLine(Begin22("1", "4"));
+        Console.WriteLine(Begin23("a", "b", "c"));
+        Console.WriteLine(Begin24("a", "b", "c"));
+        Console.WriteLine(Begin25(4));
+        Console.WriteLine(Begin26(7));
+        Console.WriteLine(Begin27(2));
+        Console.WriteLine(Begin28(5));
+        Console.WriteLine(Begin29(175));
+        Console.WriteLine(Begin30(2));
     }
     
     static float Begin1(float a)
@@ -199,5 +209,101 @@ public class Begin
     static float Begin20(float x1, float y1, float x2, float y2)
     {
         return MathF.Sqrt(MathF.Pow(x2 - x1, 2) + MathF.Pow(y2 - y1, 2));
+    }
+
+    static string Begin21(float x1, float y1, float x2, float y2, float x3, float y3)
+    {
+        float distance_a = MathF.Sqrt(MathF.Pow(x2 - x1, 2) - MathF.Pow(y2 - y1, 2)); // Расстояние между координатой 1 и 2
+        float distance_b = MathF.Sqrt(MathF.Pow(x3 - x2, 2) - MathF.Pow(y3 - y2, 2)); // Расттояние между координатой 2 и 3
+        float distance_c = MathF.Sqrt(MathF.Pow(x3 - x1, 2) - MathF.Pow(y3 - y1, 2)); // Расстояние между координатой 3 и 1
+        float half_perimeter = (distance_a + distance_b + distance_c) / 2;
+
+        float square = MathF.Sqrt(half_perimeter * (half_perimeter - distance_a) * (half_perimeter - distance_b) *
+                                  (half_perimeter - distance_c));
+
+        return $"Perimeter: {half_perimeter * 2}, Square: {square}";
+    }
+
+    static string Begin22(string a, string b)
+    {
+        (a, b) = (b, a);
+
+        return $"b = {b}, a = {a}";
+    }
+
+    static string Begin23(string a, string b, string c)
+    {
+        (a, b, c) = (b, c, a);
+        
+        return $"a: {a}, b: {b}, c: {c}";
+    }
+
+    static string Begin24(string a, string b, string c)
+    {
+        (a, b, c) = (c, a, b);
+
+        return $"a: {a}, b: {b}, c: {c}";
+    }
+
+    static float Begin25(float x)
+    {
+        float y = MathF.Pow(3 * x, 2) - MathF.Pow(6 * x, 2) - 7;
+        
+        return y;
+    }
+
+    static float Begin26(float x)
+    {
+        float y = MathF.Pow(4 * (x - 3), 6) - MathF.Pow(7 * (x - 3), 3) + 2;
+        
+        return y;
+    }
+
+    static string Begin27(float a)
+    {
+        float temp = a;
+
+        temp = temp * temp;
+        float a2 = temp;
+        temp = temp * temp;
+        float a4 = temp * temp;
+        temp = temp * temp;
+        float a8 = temp;
+
+        return $"A^2: {a2}, A^4: {a4}, A^8: {a8}";
+    }
+
+    static string Begin28(float a)
+    {
+        float temp1 = a;
+        
+        float temp2 = temp1 * temp1;
+        float a2 = temp2;
+        
+        temp1 = temp1 * temp2;
+        float a3 = temp1;
+        
+        temp2 = temp1 * temp2;
+        float a5 = temp2;
+        
+        temp1 = temp1 * temp1;
+        float a10 = temp1;
+        
+        temp1 = temp1 * temp2;
+        float a15 = temp1;
+
+        return $"a2: {a2}, a3: {a3}, a5: {a5}, a10: {a10}, a15: {a15}";
+    }
+
+    static float Begin29(float a)
+    {
+        float radians = a * MathF.PI / 180;
+        return radians;
+    }
+
+    static float Begin30(float a)
+    {
+        float gradus = a * 180 / MathF.PI;
+        return gradus;
     }
 }
