@@ -36,6 +36,16 @@ public class Begin
         Console.WriteLine(Begin28(5));
         Console.WriteLine(Begin29(175));
         Console.WriteLine(Begin30(2));
+        Console.WriteLine(Begin31(3));
+        Console.WriteLine(Begin32(4));
+        Console.WriteLine(Begin33(12, 213, 41));
+        Console.WriteLine(Begin34(12, 33, 23, 13));
+        Console.WriteLine(Begin35(12, 25, 54, 12));
+        Console.WriteLine(Begin36(98, 23, 52, 58));
+        Console.WriteLine(Begin37(12, 13, 14, 15));
+        Console.WriteLine(Begin38(24, 27));
+        Console.WriteLine(Begin39(87, 125, 255));
+        Console.WriteLine(Begin40(12, 21, 13, 31, 14, 41, 9, 4, 3));
     }
     
     static float Begin1(float a)
@@ -305,5 +315,82 @@ public class Begin
     {
         float gradus = a * 180 / MathF.PI;
         return gradus;
+    }
+
+    static float Begin31(float a)
+    {
+        float gradus = (a - 32) * 5 / 9;
+        return gradus;
+    }
+
+    static float Begin32(float a)
+    {
+        float gradus = (a * 9 / 5) + 32;
+        return gradus;
+    }
+
+    static string Begin33(int x, int a, int y)
+    {
+        float kg1 = a / x;
+        float kgY = a / x * y;
+        
+        return $"1 KG: {kg1}, Y KG: {kgY}";
+    }
+
+    static string Begin34(float chocolateMass, float chocolatePrice, float irisMass, float irisPrice)
+    {
+        float kg1choco = chocolatePrice / chocolateMass; // 1 KG Chocolate
+        float kg1iris = irisPrice / irisMass;
+        float quotient = MathF.Abs(chocolatePrice) / MathF.Abs(irisPrice);
+
+        return $"1 KG Choco: {kg1choco}, 1 KG Iris: {kg1iris}, Quotient: {quotient}";
+    }
+
+    static float Begin35(float V, float U, float T1, float T2)
+    {
+        float S = V * T1 + (V - U) * T2;
+        return S;
+    }
+
+    static float Begin36(float V1, float V2, float S, float T)
+    {
+        return S + V1 * T + V2 * T;
+    }
+
+    static float Begin37(float V1, float V2, float S, float T)
+    {
+        return MathF.Abs(S - (V1 * T + V2 * T));
+    }
+
+    static float Begin38(float a, float b)
+    {
+        return -1 * b / a;
+    }
+
+    static string Begin39(double a, double b, double c)
+    {
+        double d = Math.Pow(b, 2) - 4 * a * c;
+        double x1 = ((-1f) * b + Math.Sqrt(d)) / (2f * a);
+        double x2 = ((-1f) * b - Math.Sqrt(d)) / (2f * a);
+        
+        if (x1 > x2)
+        {
+            return $"X1 bigger than x2";
+        }
+        else
+        {
+            return $"X1 smaller X2";
+        }
+
+        return $"X1: {x1}, X2: {x2}";
+    }
+
+    static string Begin40(double a1, double a2, double b1, double b2, double c1, double c2, double d, double x, double y)
+    {
+        d = a1* b2 - b1 * a2;
+        x = (c1 * b2 - c2* b1) / d;
+        y = (a1 * c2 - a2 * c1) / d;
+
+        return $"X: {x}, Y: {y}";
     }
 }
