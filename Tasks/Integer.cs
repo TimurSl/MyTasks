@@ -1,9 +1,19 @@
-﻿namespace Tasks;
+namespace Tasks;
 
 public class Integer
 {
     public static void Main(string[] args)
     {
+        Console.WriteLine(Integer1(1000));
+        Console.WriteLine(Integer2(100000));
+        Console.WriteLine(Integer3(12325));
+        Console.WriteLine(Integer4(123, 23));
+        Console.WriteLine(Integer5(23, 12));
+        Console.WriteLine(Integer6(43));
+        Console.WriteLine(Integer7(92));
+        Console.WriteLine(Integer8(75));
+        Console.WriteLine(Integer9(123));
+        Console.WriteLine(Integer10(246));
         
     }
 
@@ -51,12 +61,12 @@ public class Integer
         return $"Числа не двухзначные :(";
     }
 
-    static string Integer7(int a, int b)
+    static string Integer7(int ab)
     {
-        if (a < 100 && b < 100)
+        if (ab < 100)
         {
-            int e = a / 10;
-            int c = a % 10;
+            int e = ab / 10;
+            int c = ab % 10;
             int sum = e + c;
             int multiply = e * c;
             return $"Сумма: {sum}, Произведение: {multiply}";
