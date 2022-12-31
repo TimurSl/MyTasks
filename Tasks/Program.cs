@@ -2,4 +2,4 @@
 
 using Tasks;
 
-Begin.Main(args);
+Integer.Main(args);
