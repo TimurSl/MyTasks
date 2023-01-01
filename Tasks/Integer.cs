@@ -14,6 +14,17 @@ public class Integer
         Console.WriteLine(Integer8(75));
         Console.WriteLine(Integer9(123));
         Console.WriteLine(Integer10(246));
+        Console.WriteLine("[{0}]", string.Join(", ", Integer11(134)));
+        Console.WriteLine(Integer12(112));
+        Console.WriteLine(Integer13(213));
+        Console.WriteLine(Integer14(188));
+        Console.WriteLine(Integer15(123));
+        Console.WriteLine(Integer16(845));
+        Console.WriteLine(Integer17(2022));
+        Console.WriteLine(Integer18(1705));
+        Console.WriteLine(Integer19(240));
+        Console.WriteLine(Integer20(450));
+        
         
     }
 
@@ -91,7 +102,74 @@ public class Integer
         int b = abc / 10 % 10;
         return $"Сотни: {a}, Десятки: {b}";
     }
+
+    static int[] Integer11(int abc)
+    {
+        int a = abc / 100;
+        int b = abc / 10 % 10;
+        int c = abc % 10;
+        return new []{ a + b + c, a * b * c };
+    }
     
+    static int Integer12(int abc)
+    {
+        int a = abc / 100;
+        int b = abc / 10 % 10;
+        int c = abc % 10;
+        return a * 100 + b * 10 + c;
+    }
+    
+    static int Integer13(int abc)
+    {
+        int a = abc / 100;
+        int b = abc / 10 % 10;
+        int c = abc % 10;
+        return a * 100 + c * 10 + b;
+    }
+    
+    static int Integer14(int abc)
+    {
+        int a = abc / 100;
+        int b = abc / 10 % 10;
+        int c = abc % 10;
+        return c * 100 + a * 10 + b;
+    }
+    
+    static int Integer15(int abc)
+    {
+        int a = abc / 100;
+        int b = abc / 10 % 10;
+        int c = abc % 10;
+        return b * 100 + a * 10 + c;
+    }
+    
+    static int Integer16(int abc)
+    {
+        int a = abc / 100;
+        int b = abc / 10 % 10;
+        int c = abc % 10;
+        return b * 100 + c * 10 + a;
+    }
+    
+    static int Integer17(int abc)
+    {
+        return (abc % 1000) / 100;
+    }
+    
+    static int Integer18(int abc)
+    {
+        return (abc % 10000) / 10;
+    }
+
+    static int Integer19(int m)
+    {
+        return m / 60;
+    }
+    
+    static int Integer20(int m)
+    {
+        return m / 60 / 60;
+    }
     
     
     
