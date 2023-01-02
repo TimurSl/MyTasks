@@ -24,8 +24,16 @@ public class Integer
         Console.WriteLine(Integer18(1705));
         Console.WriteLine(Integer19(240));
         Console.WriteLine(Integer20(450));
-        
-        
+        Console.WriteLine(Integer21(123));
+        Console.WriteLine(Integer22(398));
+        Console.WriteLine(Integer23(982));
+        Console.WriteLine(Integer24(1234));
+        Console.WriteLine(Integer25(4652));
+        Console.WriteLine(Integer26(987));
+        Console.WriteLine(Integer27(872));
+        Console.WriteLine(Integer28(123, 3));
+        Console.WriteLine(Integer29(123, 3, 23));
+        Console.WriteLine(Integer30(2391));
     }
 
     static int Integer1(int l)
@@ -171,6 +179,54 @@ public class Integer
         return m / 60 / 60;
     }
     
+    static int Integer21(int m)
+    {
+        return m % 60;
+    }
     
+    static int Integer22(int m)
+    {
+        return m % 3600;
+    }
+    
+    static int Integer23(int m)
+    {
+        return m % 3600 / 60;
+    }
+    
+    static int Integer24(int m)
+    {
+        return m % 7;
+    }
+    
+    static int Integer25(int m)
+    {
+        return (m + 3) % 7;
+    }
+    
+    static int Integer26(int m)
+    {
+        return (m % 7) + 1;
+    }
+    
+    static int Integer27(int m)
+    {
+        return ((m + 4) % 7) + 1;
+    }
+
+    static int Integer28(int a, int b)
+    {
+        return ((a + b - 2) % 7) + 1;
+    }
+
+    static int Integer29(int a, int b, int c)
+    {
+        return (a * b) / (c * c);
+    }
+
+    static int Integer30(int abcd)
+    {
+        return (abcd / 100) + 1;
+    }
     
 }
