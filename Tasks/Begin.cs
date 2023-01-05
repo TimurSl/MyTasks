@@ -111,7 +111,7 @@ public class Begin
         float s_b = MathF.Sqrt(b);
         
         float sum = s_a + s_b;
-        float difference = MathF.Max(s_a, s_b) - MathF.Min(s_a, s_b);
+        float difference = MathF.Abs(s_a - s_b);
         float multiply = s_a * s_b;
         float quotient = s_a / s_b;
 
@@ -171,12 +171,8 @@ public class Begin
 
     static string Begin17(float A, float B, float C)
     {
-        float m_a = MathF.Abs(A);
-        float m_b = MathF.Abs(B);
-        float m_c = MathF.Abs(C);
-        
-        float AC = m_c - m_a;
-        float BC = m_c - m_b;
+        float AC = MathF.Abs(C - A);
+        float BC = MathF.Abs(C - B);
         float sum = AC + BC;
 
         return $"AC: {AC}, BC: {BC}, Sum: {sum}";
@@ -184,14 +180,10 @@ public class Begin
 
     static string Begin18(float A, float B, float C)
     {
-        float m_a = MathF.Abs(A);
-        float m_b = MathF.Abs(B);
-        float m_c = MathF.Abs(C);
-        
         if (A > C && C < B)
         {
-            float AC = m_c - m_a;
-            float BC = m_c - m_b;
+            float AC = MathF.Abs(C - A);
+            float BC = MathF.Abs(C - B);
             float product = AC * BC;
 
             return $"AC: {AC}, BC: {BC}, Product: {product}";
@@ -201,17 +193,8 @@ public class Begin
 
     static string Begin19(float x1, float y1, float x2, float y2)
     {
-        float m_x1 = MathF.Abs(x1);
-        float m_x2 = MathF.Abs(x2);
-
-        float m_y1 = MathF.Abs(y1);
-        float m_y2 = MathF.Abs(y2);
-        
-        float side1 = m_x2 - m_x1;
-        float side2 = m_y2 - m_y1;
-        
-        float perimeter = 2 * (side1 + side2);
-        float area = side1 * side2;
+        float perimeter = 2 * (Math.Abs(x1 - x2) + Math.Abs(y1 - y2));
+        float area = Math.Abs(x1 - x2) * Math.Abs(y1 - y2);
 
         return $"Perimeter: {perimeter}, Area: {area}";
     }
@@ -226,12 +209,10 @@ public class Begin
         float distance_a = MathF.Sqrt(MathF.Pow(x2 - x1, 2) - MathF.Pow(y2 - y1, 2)); // Расстояние между координатой 1 и 2
         float distance_b = MathF.Sqrt(MathF.Pow(x3 - x2, 2) - MathF.Pow(y3 - y2, 2)); // Расттояние между координатой 2 и 3
         float distance_c = MathF.Sqrt(MathF.Pow(x3 - x1, 2) - MathF.Pow(y3 - y1, 2)); // Расстояние между координатой 3 и 1
-        float half_perimeter = (distance_a + distance_b + distance_c) / 2;
+        float perimeter = (distance_a + distance_b + distance_c) / 2;
+        float square = MathF.Sqrt(perimeter * (perimeter - distance_a) * (perimeter - distance_b) * (perimeter - distance_c));
 
-        float square = MathF.Sqrt(half_perimeter * (half_perimeter - distance_a) * (half_perimeter - distance_b) *
-                                  (half_perimeter - distance_c));
-
-        return $"Perimeter: {half_perimeter * 2}, Square: {square}";
+        return $"Perimeter: {perimeter}, Square: {square}";
     }
 
     static string Begin22(string a, string b)
@@ -257,16 +238,12 @@ public class Begin
 
     static float Begin25(float x)
     {
-        float y = MathF.Pow(3 * x, 2) - MathF.Pow(6 * x, 2) - 7;
-        
-        return y;
+        return MathF.Pow(3 * x, 2) - MathF.Pow(6 * x, 2) - 7;
     }
 
     static float Begin26(float x)
     {
-        float y = MathF.Pow(4 * (x - 3), 6) - MathF.Pow(7 * (x - 3), 3) + 2;
-        
-        return y;
+        return MathF.Pow(4 * (x - 3), 6) - MathF.Pow(7 * (x - 3), 3) + 2;
     }
 
     static string Begin27(float a)
@@ -319,31 +296,31 @@ public class Begin
 
     static float Begin31(float a)
     {
-        float gradus = (a - 32) * 5 / 9;
-        return gradus;
+        return (a - 32) * 5 / 9;
     }
 
     static float Begin32(float a)
     {
-        float gradus = (a * 9 / 5) + 32;
-        return gradus;
+        return  (a * 9 / 5) + 32;
     }
 
     static string Begin33(int x, int a, int y)
     {
         float kg1 = a / x;
-        float kgY = a / x * y;
+        float kgY = kg1 * y;
         
         return $"1 KG: {kg1}, Y KG: {kgY}";
     }
 
     static string Begin34(float chocolateMass, float chocolatePrice, float irisMass, float irisPrice)
     {
-        float kg1choco = chocolatePrice / chocolateMass; // 1 KG Chocolate
-        float kg1iris = irisPrice / irisMass;
-        float quotient = MathF.Abs(chocolatePrice) / MathF.Abs(irisPrice);
-
-        return $"1 KG Choco: {kg1choco}, 1 KG Iris: {kg1iris}, Quotient: {quotient}";
+        // Известно, что X кг шоколадных конфет стоит A рублей, а Y кг ирисок стоит B рублей. Определить, сколько стоит 1 кг шоколадных конфет,1 кг ирисок, а также во сколько раз шоколадные конфеты дороже ирисок.
+        float chocolatePricePerKg = chocolatePrice / chocolateMass;
+        float irisPricePerKg = irisPrice / irisMass;
+        
+        float difference = chocolatePricePerKg / irisPricePerKg;
+        
+        return $"Chocolate price per kg: {chocolatePricePerKg}, Iris price per kg: {irisPricePerKg}, Difference: {difference}";
     }
 
     static float Begin35(float V, float U, float T1, float T2)

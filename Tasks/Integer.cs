@@ -63,34 +63,22 @@ public class Integer
 
     static int Integer5(int a, int b)
     {
-        if (a > b)
-        {
-            return a % b;
-        }
 
-        return 0;
+        return a % b;;
     }
 
     static string Integer6(int ab)
     {
-        if (ab < 100)
-        {
-            return $"Десятки: {ab / 10}, Единицы: {ab % 10}";
-        }
-        return $"Числа не двухзначные :(";
+        return $"Десятки: {ab / 10}, Единицы: {ab % 10}";
     }
 
     static string Integer7(int ab)
     {
-        if (ab < 100)
-        {
-            int e = ab / 10;
-            int c = ab % 10;
-            int sum = e + c;
-            int multiply = e * c;
-            return $"Сумма: {sum}, Произведение: {multiply}";
-        }
-        return $"Числа не двухзначные :(";
+        int e = ab / 10;
+        int c = ab % 10;
+        int sum = e + c;
+        int multiply = e * c;
+        return $"Сумма: {sum}, Произведение: {multiply}";
     }
 
     static int Integer8(int ab)

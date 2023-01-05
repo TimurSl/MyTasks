@@ -58,7 +58,7 @@ public class Boolean
     
     static bool Boolean7(int a, int b, int c)
     {
-        return a > b && b < c;
+        return a < b && b < c;
     }
     
     static bool Boolean8(int a, int b)
