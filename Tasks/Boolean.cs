@@ -24,6 +24,16 @@ public class Boolean
         Console.WriteLine(Boolean18(255, 89, 23));
         Console.WriteLine(Boolean19(587, 124, 387));
         Console.WriteLine(Boolean20(123));
+        Console.WriteLine(Boolean21(123));
+        Console.WriteLine(Boolean22(123));
+        Console.WriteLine(Boolean23(3443));
+        Console.WriteLine(Boolean24(3443));
+        Console.WriteLine(Boolean25(33, 12));
+        Console.WriteLine(Boolean26(33, 12));
+        Console.WriteLine(Boolean27(33, 15));
+        Console.WriteLine(Boolean28(33, 56));
+        Console.WriteLine(Boolean29(33, 56, 23, 45, 23, 47));
+        Console.WriteLine(Boolean30(33, 56, 23));
     }
 
     static bool Boolean1(int a)
@@ -128,6 +138,69 @@ public class Boolean
         int c = abc % 10;
         return a != b && a != c && b != c;
     }
+
+    static bool Boolean21(int abc)
+    {
+        int a = abc / 100;
+        int b = abc / 10 % 10;
+        int c = abc % 10;
+        return a < b && b < c;
+    }
+
+    static bool Boolean22(int abc)
+    {
+        int a = abc / 100;
+        int b = abc / 10 % 10;
+        int c = abc % 10;
+        return (a < b && b < c) || (c < b && b < a);
+    }
+
+    static bool Boolean23(int abcd)
+    {
+        int a = abcd / 1000;
+        int b = abcd / 100 % 10;
+        int c = abcd / 10 % 10;
+        int d = abcd % 10;
+        return a == d && b == c;
+    }
     
+    static bool Boolean24(int abcd)
+    {
+        int a = abcd / 1000;
+        int b = abcd / 100 % 10;
+        int c = abcd / 10 % 10;
+        int d = abcd % 10;
+        return Math.Pow(b, 2) - (4 * a * c) > 0;
+    }
+
+    static bool Boolean25(int x, int y)
+    {
+        return x < 0 && y > 0;
+    }
+
+    static bool Boolean26(int x, int y)
+    {
+        return x > 0 && y < 0;
+    }
+
+    static bool Boolean27(int x, int y)
+    {
+        return (x == 0) || (x < 0 && y < 0);
+    }
+
+    static bool Boolean28(int x, int y)
+    {
+        return x < 0 && y != 0 && y > 0;
+    }
     
+    static bool Boolean29(int x, int y, int x1, int y1, int x2, int y2)
+    {
+        return x1 < x && x < x2 && y2 < y && y < y1;
+    }
+
+    static bool Boolean30(int a, int b, int c)
+    {
+        return (a == b) && (c == b) && (c == a);
+    }
+
 }
