@@ -203,4 +203,53 @@ public class Boolean
         return (a == b) && (c == b) && (c == a);
     }
 
+    static bool Boolean31(int a, int b, int c)
+    {
+        return (a == b) || (c == b) || (c == a);
+    }
+
+    static bool Boolean32(int a, int b, int c)
+    {
+        return (a == b + c) || (c == b + a) || (b == c + a);
+    }
+
+    static bool Boolean33(int a, int b, int c)
+    {
+        return (a + b) > c && (a + c) > b && (b + c) > a;
+    }
+
+    static bool Boolean34(int x, int y)
+    {
+        return (x + y) % 2 != 0;
+    }
+
+    static bool Boolean35(int x1, int y1, int x2, int y2)
+    {
+        return (x1 + y1) % 2 == (x2 + y2) % 2;
+    }
+
+    static bool Boolean36(int x1, int y1, int x2, int y2)
+    {
+        return (x1 == x2) || (y1 == y2);
+    }
+    
+    static bool Boolean37(int x1, int y1, int x2, int y2)
+    {
+        return Math.Abs(x1 - x2) <= 1 && Math.Abs(y1 - y2) <= 1;
+    }
+    
+    static bool Boolean38(int x1, int y1, int x2, int y2)
+    {
+        return Math.Abs(x1 - x2) <= 1 && Math.Abs(y1 - y2) <= 1 && (x1 != x2 || y1 != y2);
+    }
+    
+    static bool Boolean39(int x1, int y1, int x2, int y2)
+    {
+        return Math.Abs(x1 - x2) <= 1 && Math.Abs(y1 - y2) <= 1 && (x1 != x2 || y1 != y2) && (x1 + y1) % 2 == (x2 + y2) % 2;
+    }
+    
+    static bool Boolean40(int x1, int y1, int x2, int y2)
+    {
+        return MathF.Abs(x1 - x2) == 1 && MathF.Abs(y1 - y2) == 2 || MathF.Abs(x1 - x2) == 2 && MathF.Abs(y1 - y2) == 1;
+    }
 }
