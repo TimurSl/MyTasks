@@ -24,6 +24,16 @@ public class If
         If18(43, 44, 45);
         If19(46, 47, 48, 49);
         If20(50, 51, 52);
+        If21(53, 54);
+        If22(55, 56);
+        If23(57, 58, 12, 56, 21, 24);
+        If24(59);
+        If25(60);
+        If26(61);
+        If27(62);
+        If28(63);
+        If29(64);
+        If30(65);
     }
 
     static void If1(int a)
@@ -369,5 +379,201 @@ public class If
             Console.WriteLine("C " + distanceC);
         }
     }
+    static void If21(int x, int y)
+    {
+        if (x == 0 && y == 0)
+        {
+            Console.WriteLine(0);
+        }
+        else if (x == 0)
+        {
+            Console.WriteLine(1);
+        }
+        else if (y == 0)
+        {
+            Console.WriteLine(2);
+        }
+        else
+        {
+            Console.WriteLine(3);
+        }
+    }
     
+    static void If22(int x, int y)
+    {
+        if (x > 0 && y > 0)
+        {
+            Console.WriteLine(1);
+        }
+        else if (x < 0 && y > 0)
+        {
+            Console.WriteLine(2);
+        }
+        else if (x < 0 && y < 0)
+        {
+            Console.WriteLine(3);
+        }
+        else
+        {
+            Console.WriteLine(4);
+        }
+    }
+    
+    static void If23(int x1, int y1, int x2, int y2, int x3, int y3)
+    {
+        int x4 = 0;
+        int y4 = 0;
+        if (x1 == x2)
+        {
+            x4 = x3;
+        }
+        else if (x1 == x3)
+        {
+            x4 = x2;
+        }
+        else
+        {
+            x4 = x1;
+        }
+        
+        if (y1 == y2)
+        {
+            y4 = y3;
+        }
+        else if (y1 == y3)
+        {
+            y4 = y2;
+        }
+        else
+        {
+            y4 = y1;
+        }
+        
+        Console.WriteLine(x4 + " " + y4);
+    }
+    
+    static void If24(float x)
+    {
+        float result = 0;
+        if (x > 0)
+        {
+            result = 2 * (float)Math.Sin(x);
+        }
+        else
+        {
+            result = 6 - x;
+        }
+        
+        Console.WriteLine(result);
+    }
+
+    static void If25(float x)
+    {
+        if (x < -2 || x > 2)
+        {
+            Console.WriteLine(2 * x);
+        }
+        else
+        {
+            Console.WriteLine(-3 * x);
+        }
+    }
+    
+    static void If26(float x)
+    {
+        if (x <= 0)
+        {
+            Console.WriteLine(-x);
+        }
+        else if (x > 0 && x < 2)
+        {
+            Console.WriteLine(x * x);
+        }
+        else
+        {
+            Console.WriteLine(4);
+        }
+    }
+
+    static void If27(float x)
+    {
+        if (x < 0)
+        {
+            Console.WriteLine(0);
+        }
+        else if (x >= 0 && x < 1 || x >= 2 && x < 3)
+        {
+            Console.WriteLine(1);
+        }
+        else if(x >= 1 && x < 2 || x >= 3 && x < 4)
+        {
+            Console.WriteLine(-1);
+        }
+    }
+    
+    static void If28(int year)
+    {
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+        {
+            Console.WriteLine(366);
+        }
+        else
+        {
+            Console.WriteLine(365);
+        }
+    }
+
+    static void If29(int a)
+    {
+        if (a == 0)
+        {
+            Console.WriteLine("нулевое число");
+        }
+        else
+        {
+            if (a < 0)
+            {
+                Console.Write("отрицательное ");
+            }
+            else
+            {
+                Console.Write("положительное ");
+            }
+    
+            if (a % 2 == 0)
+            {
+                Console.WriteLine("четное число");
+            }
+            else
+            {
+                Console.WriteLine("нечетное число");
+            }
+        }
+    }
+    
+    static void If30(int a)
+    {
+        if (a % 2 == 0)
+        {
+            Console.Write("четное ");
+        }
+        else
+        {
+            Console.Write("нечетное ");
+        }
+    
+        if (a < 10)
+        {
+            Console.WriteLine("однозначное число");
+        }
+        else if (a < 100)
+        {
+            Console.WriteLine("двузначное число");
+        }
+        else
+        {
+            Console.WriteLine("трехзначное число");
+        }
+    }
+
 }
