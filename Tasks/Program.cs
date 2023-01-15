@@ -3,4 +3,4 @@
 using Tasks;
 using Boolean = Tasks.Boolean;
 
-Case.Main(args);
+For.Main(args);
