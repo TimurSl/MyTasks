@@ -44,6 +44,26 @@ public class For
         For19(17);
         Console.WriteLine("For20: ");
         For20(17);
+        Console.WriteLine("For21: ");
+        For21(3);
+        Console.WriteLine("For22: ");
+        For22(17, 12);
+        Console.WriteLine("For23: ");
+        For23(17, 12);
+        Console.WriteLine("For24: ");
+        For24(17, 12);
+        Console.WriteLine("For25: ");
+        For25(17, 12);
+        Console.WriteLine("For26: ");
+        For26(17, 12);
+        Console.WriteLine("For27: ");
+        For27(17, 12);
+        Console.WriteLine("For28: ");
+        For28(17, 12);
+        Console.WriteLine("For29: ");
+        For29(17, 12, 23);
+        Console.WriteLine("For30: ");
+        For30(17, 12, 23);
     }
 
     public static void For1(int n, int k)
@@ -240,8 +260,163 @@ public class For
     
     static int Factorial(int n)
     {
-        if (n == 1) return 1;
- 
-        return n * Factorial(n - 1);
+        if (n == 1 || n == 0) return 1;
+        
+        int result = 1;
+        for (int i = 1; i <= n; i++)
+        {
+            result *= i;
+        }
+        return result;
     }
+
+    public static void For21(int n)
+    {
+        int sum = 1;
+        for (int i = 0; i < n; i++)
+        {
+            sum += 1 / Factorial(i);
+        }
+        Console.WriteLine(sum);
+    }
+
+    public static void For22(double x, int n)
+    {
+        double sum = 1 + x;
+        for (int i = 0; i < x; i++)
+        {
+            sum += Math.Pow(x, n) / (Factorial(n));
+        }
+        Console.WriteLine(sum);
+    }
+    
+    public static void For23(int x, int n)
+    {
+        double s = x;
+        int k = 1;
+        for (int i = 0; i < n + 1; i++)
+        {
+            k *= (2 * i + 1);
+            s += (Math.Pow(-1, i) * Math.Pow(x, (2 * i + 1))) / k;
+        }
+        Console.WriteLine(s);
+        Console.WriteLine(Math.Sin(x));
+    }
+
+    public static void For24(float x, int n)
+    {
+        float x1 = 1;
+        float n1 = 1; 
+        float rez = 1.0f;
+        int i, k = 0;
+ 
+        for (i = 2; i <= n; ++i) {
+            ++k;
+            n1 *= (float)k;
+            ++k;
+            n1 *= (float)k;
+            x1 *= -1 * x * x;
+            rez += x1 / n1;
+        }
+        Console.WriteLine(rez);
+        Console.WriteLine(Math.Cos(x));
+    }
+
+    public static void For25(float x, int n)
+    {
+        float x1 = x;
+        float rez = x;
+        int i;
+ 
+        for (i = 2; i <= n; ++i) {  
+            x1 *= -1 * x;
+            rez += x1 / i;
+        }
+        Console.WriteLine(rez);
+        Console.WriteLine(Math.Log(1 + x));
+    }
+    
+    public static void For26(float x, int n)
+    {
+        float x1 = x;
+        float rez = x;
+        int i, k = 1;
+        
+        for (i = 2; i <= n; ++i) {
+            k += 2;
+            x1 *= -1 * x * x;
+            rez += x1 / k;
+        }
+        
+        Console.WriteLine(rez);
+        Console.WriteLine(Math.Atan(x));
+    }
+    
+    public static void For27(float x, int n)
+    {
+        float otvet;
+        float b;
+        float c;
+        float pow;
+        
+        b = pow = 1;
+        c = x;
+        otvet = x;
+        
+        for(int i = 1; i <= n; i++)
+        {
+            c = c * x * x;
+            pow = pow * (2 * i - 1);
+            b = b * (i * 2 + 1) * (i * 2);
+            otvet += (pow * c) / b;
+            b = b / (i * 2 + 1);
+        }
+        
+        Console.WriteLine(otvet);
+        Console.WriteLine(Math.Asin(x));
+    }
+
+    public static void For28(float x, int n)
+    {
+        float tempVar1 = 1;
+        float tempVar2 = 1;
+        float result = 1; 
+        float pow = 1;
+        
+        for (int i = 1; i < n; ++i) 
+        {
+            tempVar1 *= 2 * i - 3;
+            tempVar2 *= 2 * i;
+            pow *= (-1) * x;
+            result += tempVar1 * pow / tempVar2;
+        }
+
+        Console.WriteLine(result);
+        Console.WriteLine(Math.Asin(x));
+    }
+
+    public static void For29(int n, float a, float b)
+    {
+        float h = (b - a) / n;
+        Console.WriteLine(h);
+
+        for (int i = 0; i <= n; ++i)
+        {
+            Console.WriteLine(a + i * h);
+        }
+    }
+
+    public static void For30(int n, float a, float b)
+    {
+        float h = (b - a) / n;
+        Console.WriteLine(h);
+        
+        for (int i = 0; i <= n; ++i) 
+        {
+            Console.WriteLine(1 - MathF.Sin(a + i * h));
+        }
+    }
+
+
+
 }
