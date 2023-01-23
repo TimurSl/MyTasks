@@ -64,6 +64,26 @@ public class For
         For29(17, 12, 23);
         Console.WriteLine("For30: ");
         For30(17, 12, 23);
+        Console.WriteLine("For31: ");
+        For31(17);
+        Console.WriteLine("For32: ");
+        For32(17);
+        Console.WriteLine("For33: ");
+        For33(17);
+        Console.WriteLine("For34: ");
+        For34(17);
+        Console.WriteLine("For35: ");
+        For35(17);
+        Console.WriteLine("For36: ");
+        For36(17, 12);
+        Console.WriteLine("For37: ");
+        For37(17);
+        Console.WriteLine("For38: ");
+        For38(17);
+        Console.WriteLine("For39: ");
+        For39(11, 156);
+        Console.WriteLine("For40: ");
+        For40(17, 22);
     }
 
     public static void For1(int n, int k)
@@ -416,7 +436,135 @@ public class For
             Console.WriteLine(1 - MathF.Sin(a + i * h));
         }
     }
-
-
-
+        
+    public static void For31(int n)
+    {
+        float a = 2;
+        Console.WriteLine(a);
+        for (int i = 1; i < n; i++)
+        {
+            a = 2 + 1 / a;
+            Console.WriteLine(a);
+        }
+    }
+    
+    public static void For32(int n)
+    {
+        float a = 1;
+        Console.WriteLine(a);
+        for (int i = 1; i < n; i++)
+        {
+            a = (a + 1) / i;
+            Console.WriteLine(a);
+        }
+    }
+    
+    public static void For33(int n)
+    {
+        int a = 1;
+        int b = 1;
+        Console.WriteLine(a);
+        Console.WriteLine(b);
+        for (int i = 2; i < n; i++)
+        {
+            int c = a + b;
+            a = b;
+            b = c;
+            Console.WriteLine(c);
+        }
+    }
+    
+    public static void For34(int n)
+    {
+        float a = 1;
+        float b = 2;
+        Console.WriteLine(a);
+        Console.WriteLine(b);
+        for (int i = 2; i < n; i++)
+        {
+            float c = (a + 2 * b) / 3;
+            a = b;
+            b = c;
+            Console.WriteLine(c);
+        }
+    }
+    
+    public static void For35(int n)
+    {
+        int a1 = 1;
+        int a2 = 2;
+        int a3 = 3;
+        Console.WriteLine(a1);
+        Console.WriteLine(a2);
+        Console.WriteLine(a3);
+        for (int i = 3; i < n; i++)
+        {
+            int a = a3 + a2 - 2 * a1;
+            a1 = a2;
+            a2 = a3;
+            a3 = a;
+            Console.WriteLine(a);
+        }
+    }
+    public static void For36(int n, int k)
+    {
+        float sum = 0;
+        for (int i = 1; i <= n; i++)
+        {
+            sum += (float)1 / (i * i + k);
+        }
+        Console.WriteLine(sum);
+    }
+    
+    public static void For37(int n)
+    {
+        float sum = 0;
+        for (int i = 1; i <= n; i++)
+        {
+            float temp = 1;
+            for (int j = 1; j <= i; j++)
+            {
+                temp *= j;
+            }
+            sum += temp;
+        }
+        Console.WriteLine(sum);
+    }
+    
+    public static void For38(int n)
+    {
+        float sum = 0;
+        for (int i = 1; i <= n; i++)
+        {
+            float temp = 1;
+            for (int j = 1; j <= i; j++)
+            {
+                temp *= j;
+            }
+            sum += temp;
+        }
+        Console.WriteLine(sum);
+    }
+    
+    public static void For39(int a, int b)
+    {
+        for (int i = a; i <= b; i++)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+    
+    public static void For40(int a, int b)
+    {
+        for (int i = a; i <= b; i++)
+        {
+            for (int j = 0; j < i - a + 1; j++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
 }

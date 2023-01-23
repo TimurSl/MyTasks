@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿
+using System.Numerics;
 
 namespace Tasks;
 
@@ -193,8 +194,11 @@ public class Begin
 
     static string Begin19(float x1, float y1, float x2, float y2)
     {
-        float perimeter = 2 * (Math.Abs(x1 - x2) + Math.Abs(y1 - y2));
-        float area = Math.Abs(x1 - x2) * Math.Abs(y1 - y2);
+        float distance_x = MathF.Abs(x1 - x2);
+        float distance_y = MathF.Abs(y1 - y2);
+        
+        float perimeter = 2 * distance_x + distance_y;
+        float area = distance_x * distance_y;
 
         return $"Perimeter: {perimeter}, Area: {area}";
     }

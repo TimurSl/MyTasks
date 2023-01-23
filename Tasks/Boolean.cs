@@ -73,7 +73,7 @@ public class Boolean
     
     static bool Boolean8(int a, int b)
     {
-        return a % 2 != 0 && b % 2 != 0;
+        return a % 2 != 0 || b % 2 != 0;
     }
     
     static bool Boolean9(int a, int b)

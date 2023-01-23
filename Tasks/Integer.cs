@@ -207,14 +207,15 @@ public class Integer
         return ((a + b - 2) % 7) + 1;
     }
 
-    static int Integer29(int a, int b, int c)
+    static int[] Integer29(int a, int b, int c)
     {
-        return (a * b) / (c * c);
+        int count = (a / c) * (b / c);
+        int area = a * b - count * c * c;
+        return new []{ count, area };
     }
 
-    static int Integer30(int abcd)
+    static int Integer30(int a)
     {
-        return (abcd / 100) + 1;
+        return a / 100 + 1;
     }
-    
 }
