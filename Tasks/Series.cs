@@ -155,5 +155,186 @@ public class Series
         Console.WriteLine(positive);
     }
 
+    public static void Series11(int n, int k, int[] numbers)
+    {
+        bool status = false;
+        for (int i = n; i <= n; i++)
+        {
+            if (numbers[i] < k)
+            {
+                status = true;
+            }
+        }
+
+        Console.WriteLine(status);
+    }
+
+    public static void Series12(int[] numbers)
+    {
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            if (numbers[i] == 0)
+            {
+                Console.WriteLine(i);
+                break;
+            }
+        }
+    }
     
+    public static void Series13(int[] numbers)
+    {
+        int sum = 0;
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            if (numbers[i] == 0)
+            {
+                Console.WriteLine(i);
+                break;
+            }
+            else if (numbers[i] > 0 && numbers[i] % 2 == 0)
+            {
+                sum += numbers[i];
+            }
+        }
+
+        Console.WriteLine(sum);
+    }
+    
+    public static void Series14(int[] numbers, int k)
+    {
+        int count = 0;
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            if (numbers[i] == 0)
+            {
+                Console.WriteLine(i);
+                break;
+            }
+            else if (numbers[i] < k)
+            {
+                count++;
+            }
+            
+        }
+
+        Console.WriteLine(count);
+    }
+    
+    public static void Series15(int[] numbers, int k)
+    {
+        int count = 0;
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            if (numbers[i] == 0)
+            {
+                Console.WriteLine(i);
+                break;
+            }
+            else if (numbers[i] > k)
+            {
+                count = i;
+                break;
+            }
+            
+        }
+
+        Console.WriteLine(count);
+    }
+    
+    public static void Series16(int[] numbers, int k)
+    {
+        int count = 0;
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            if (numbers[i] == 0)
+            {
+                Console.WriteLine(i);
+                break;
+            }
+            else if (numbers[i] > k)
+            {
+                count = i;
+            }
+            
+        }
+
+        Console.WriteLine(count);
+    }
+    
+    public static void Series17(float[] numbers, float b)
+    {
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            if (numbers[i] == 0)
+            {
+                Console.WriteLine(i);
+                break;
+            }
+            else if (numbers[i] > b)
+            {
+                Console.WriteLine(b);
+                Console.WriteLine(numbers[i]);
+            }
+            else
+            {
+                Console.WriteLine(numbers[i]);
+            }
+        }
+    }
+    
+    public static void Series18(int[] numbers, int n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            if (numbers[i] == 0)
+            {
+                Console.WriteLine(i);
+                break;
+            }
+            else if (numbers[i] != numbers[i + 1])
+            {
+                Console.WriteLine(numbers[i]);
+            }
+        }
+    }
+    
+    public static void Series19(int[] numbers, int n)
+    {
+        int count = 0;
+        for (int i = 1; i < n; i++)
+        {
+            if (numbers[i] == 0)
+            {
+                Console.WriteLine(i);
+                break;
+            }
+            else if (numbers[i] < numbers[i - 1])
+            {
+                Console.WriteLine(numbers[i]);
+                count++;
+            }
+        }
+
+        Console.WriteLine(count);
+    }
+    
+    public static void Series20(int[] numbers, int n)
+    {
+        int count = 0;
+        for (int i = 0; i < n - 1; i++)
+        {
+            if (numbers[i] == 0)
+            {
+                Console.WriteLine(i);
+                break;
+            }
+            else if (numbers[i] < numbers[i + 1])
+            {
+                Console.WriteLine(numbers[i]);
+                count++;
+            }
+        }
+
+        Console.WriteLine(count);
+    }
 }
