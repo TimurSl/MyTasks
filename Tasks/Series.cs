@@ -24,6 +24,7 @@ public class Series
         Series9(4, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9});
         Console.WriteLine("---Series 10:");
         Series10(4, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9});
+        
     }
 
     public static void Series1(int[] numbers)
@@ -336,5 +337,191 @@ public class Series
         }
 
         Console.WriteLine(count);
+    }
+
+    public static void Series21(int n, float[] numbers)
+    {
+        bool status = false;
+        for (int i = 0; i < n - 1; i++)
+        {
+            if (numbers[i] < numbers[i + 1])
+            {
+                status = true;
+            }
+            else
+            {
+                status = false;
+                break;
+            }
+        }
+
+        Console.WriteLine(status);
+    }
+
+    public static void Series22(int n, float[] numbers)
+    {
+        for (int i = 0; i < n - 1; i++)
+        {
+            if (numbers[i] > numbers[i + 1])
+            {
+                Console.WriteLine(i + 1);
+                break;
+            }
+            else if (numbers[i] < numbers[i + 1])
+            {
+                Console.WriteLine(0);
+                break;
+            }
+        }
+    }
+
+    public static void Series23(int n, float[] numbers)
+    {
+        for (int i = 1; i < n - 1; i++)
+        {
+            if (numbers[i] > numbers[i - 1] && numbers[i] > numbers[i + 1])
+            {
+                Console.WriteLine(i);
+                break;
+            }
+            else if (numbers[i] < numbers[i - 1] && numbers[i] < numbers[i + 1])
+            {
+                Console.WriteLine(i);
+                break;
+            }
+            else if (numbers[i] > numbers[i - 1] && numbers[i] < numbers[i + 1])
+            {
+                Console.WriteLine(0);
+                break;
+            }
+            else if (numbers[i] < numbers[i - 1] && numbers[i] > numbers[i + 1])
+            {
+                Console.WriteLine(0);
+                break;
+            }
+        }
+    }
+
+    public static void Series24(int n, int[] numbers)
+    {
+        int sum = 0;
+        for (int i = 0; i < n; i++)
+        {
+            if (numbers[i] == 0 && numbers[i + 1] == 0)
+            {
+                Console.WriteLine(0);
+                break;
+            }
+            else if (numbers[i] == 0)
+            {
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (numbers[j] == 0)
+                    {
+                        Console.WriteLine(sum);
+                        break;
+                    }
+                    else
+                    {
+                        sum += numbers[j];
+                    }
+                }
+            }
+        }
+    }
+
+    public static void Series25(int n, int[] numbers)
+    {
+        int sum = 0;
+        for (int i = 0; i < n; i++)
+        {
+            if (numbers[i] == 0 && numbers[i + 1] == 0)
+            {
+                Console.WriteLine(0);
+                break;
+            }
+            else if (numbers[i] == 0)
+            {
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (numbers[j] == 0)
+                    {
+                        Console.WriteLine(sum);
+                        break;
+                    }
+                    else
+                    {
+                        sum += numbers[j];
+                    }
+                }
+            }
+        }
+    }
+    
+    public static void Series26(int n, int k, float[] numbers)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            float result = 1;
+            for (int j = 0; j < k; j++)
+            {
+                result *= numbers[i];
+            }
+
+            Console.WriteLine(result);
+        }
+    }
+    
+    public static void Series27(int n, float[] numbers)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            float result = 1;
+            for (int j = 0; j < i + 1; j++)
+            {
+                result *= numbers[i];
+            }
+
+            Console.WriteLine(result);
+        }
+    }
+    
+    public static void Series28(int n, float[] numbers)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            float result = 1;
+            for (int j = 0; j < n - i; j++)
+            {
+                result *= numbers[i];
+            }
+
+            Console.WriteLine(result);
+        }
+    }
+    
+    public static void Series29(int n, int k, int[] numbers)
+    {
+        int sum = 0;
+        for (int i = 0; i < n * k; i++)
+        {
+            sum += numbers[i];
+        }
+
+        Console.WriteLine(sum);
+    }
+    
+    public static void Series30(int n, int k, int[] numbers)
+    {
+        for (int i = 0; i < n * k; i++)
+        {
+            int sum = 0;
+            for (int j = 0; j < n; j++)
+            {
+                sum += numbers[i];
+            }
+
+            Console.WriteLine(sum);
+        }
     }
 }
