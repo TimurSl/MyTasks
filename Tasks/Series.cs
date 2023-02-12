@@ -24,6 +24,66 @@ public class Series
         Series9(4, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9});
         Console.WriteLine("---Series 10:");
         Series10(4, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9});
+        Console.WriteLine("---Series 11:");
+        Series11(1, 4, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9});
+        Console.WriteLine("---Series 12:");
+        Series12(new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9});
+        Console.WriteLine("---Series 13:");
+        Series13(new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9});
+        Console.WriteLine("---Series 14:");
+        Series14(new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9}, 4);
+        Console.WriteLine("---Series 15:");
+        Series15(new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9}, 4);
+        Console.WriteLine("---Series 16:");
+        Series16(new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9}, 4);
+        Console.WriteLine("---Series 17:");
+        Series17(new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9f}, 4);
+        Console.WriteLine("---Series 18:");
+        Series18(new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9}, 4);
+        Console.WriteLine("---Series 19:");
+        Series19(new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9}, 4);
+        Console.WriteLine("---Series 20:");
+        Series20(new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9}, 4);
+        Console.WriteLine("---Series 21:");
+        Series21(4, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9f});
+        Console.WriteLine("---Series 22:");
+        Series22(4, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9f});
+        Console.WriteLine("---Series 23:");
+        Series23(4, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9f});
+        Console.WriteLine("---Series 24:");
+        Series24(4, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9});
+        Console.WriteLine("---Series 25:");
+        Series25(4, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9});
+        Console.WriteLine("---Series 26:");
+        Series26(4, 5, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9f });
+        Console.WriteLine("---Series 27:");
+        Series27(4, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9f });
+        Console.WriteLine("---Series 28:");
+        Series28(4, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9f });
+        Console.WriteLine("---Series 29:");
+        Series29(5, 1, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        Console.WriteLine("---Series 30:");
+        Series30(3, 2, new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        Console.WriteLine("---Series 31:");
+        Series31(3, 3, 6);
+        Console.WriteLine("---Series 32:");
+        Series32(1, 2, new [] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        Console.WriteLine("---Series 33:");
+        Series33(3, 1, new [] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        Console.WriteLine("---Series 34:");
+        Series34(3, 1, new [] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        Console.WriteLine("---Series 35:");
+        Series35(3, 3, new [] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        Console.WriteLine("---Series 36:");
+        Series36(1, 5, new [] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        Console.WriteLine("---Series 37:");
+        Series37(4, 1, new [] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        Console.WriteLine("---Series 38:");
+        Series38(4, 1, new [] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        Console.WriteLine("---Series 39:");
+        Series39(4, 1, new [] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        Console.WriteLine("---Series 40:");
+        Series40(3, 2, new [] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
         
     }
 
@@ -522,6 +582,182 @@ public class Series
             }
 
             Console.WriteLine(sum);
+        }
+    }
+
+    public static void Series31(int n, int k, int kount)
+    {
+        int count = 0;
+        for (int i = 0; i < n * k; i++)
+        {
+            if (kount == 2)
+            {
+                count++;
+            }
+        }
+        
+        Console.WriteLine(count);
+    }
+    
+    public static void Series32(int n, int k, int[] numbers)
+    {
+        for (int i = 0; i < n * k; i++)
+        {
+            if (numbers[i] == 2)
+            {
+                Console.WriteLine(i);
+                break;
+            }
+            else if (numbers[i] != 2)
+            {
+                Console.WriteLine(0);
+                break;
+            }
+        }
+    }
+    
+    public static void Series33(int n, int k, int[] numbers)
+    {
+        for (int i = 0; i < n * k; i++)
+        {
+            if (numbers[i] == 2)
+            {
+                Console.WriteLine(i);
+                break;
+            }
+            else if (numbers[i] != 2)
+            {
+                Console.WriteLine(0);
+                break;
+            }
+        }
+    }
+    
+    public static void Series34(int n, int k, int[] numbers)
+    {
+        for (int i = 0; i < n * k; i++)
+        {
+            if (numbers[i] == 2)
+            {
+                int sum = 0;
+                for (int j = 0; j < n; j++)
+                {
+                    sum += numbers[i];
+                }
+
+                Console.WriteLine(sum);
+                break;
+            }
+            else if (numbers[i] != 2)
+            {
+                Console.WriteLine(0);
+                break;
+            }
+        }
+    }
+    
+    public static void Series35(int n, int k, int[] numbers)
+    {
+        int count = 0;
+        for (int i = 0; i < n * k; i++)
+        {
+            if (numbers[i] == 0)
+            {
+                count++;
+            }
+        }
+
+        Console.WriteLine(count);
+    }
+    
+    public static void Series36(int n, int k, int[] numbers)
+    {
+        int count = 0;
+        for (int i = 0; i < n * k; i++)
+        {
+            if (numbers[i] < numbers[i + 1])
+            {
+                count++;
+            }
+        }
+
+        Console.WriteLine(count);
+    }
+    
+    public static void Series37(int n, int k, int[] numbers)
+    {
+        int count = 0;
+        for (int i = 0; i < n * k; i++)
+        {
+            if (numbers[i] < numbers[i + 1])
+            {
+                count++;
+            }
+        }
+
+        Console.WriteLine(count);
+    }
+    
+    public static void Series38(int n, int k, int[] numbers)
+    {
+        for (int i = 0; i < n * k; i++)
+        {
+            if (numbers[i] < numbers[i + 1])
+            {
+                Console.WriteLine(1);
+                break;
+            }
+            else if (numbers[i] > numbers[i + 1])
+            {
+                Console.WriteLine(-1);
+                break;
+            }
+            else if (numbers[i] == numbers[i + 1])
+            {
+                Console.WriteLine(0);
+                break;
+            }
+        }
+    }
+    
+    public static void Series39(int n, int k, int[] numbers)
+    {
+        int count = 0;
+        for (int i = 0; i < n * k; i++)
+        {
+            if (numbers[i] < numbers[i + 1])
+            {
+                count++;
+            }
+        }
+
+        Console.WriteLine(count);
+    }
+    
+    public static void Series40(int n, int k, int[] numbers)
+    {
+        for (int i = 0; i < n * k; i++)
+        {
+            if (numbers[i] < numbers[i + 1] && numbers[i + 1] > numbers[i + 2])
+            {
+                Console.WriteLine(numbers[i]);
+                break;
+            }
+            else if (numbers[i] > numbers[i + 1] && numbers[i + 1] < numbers[i + 2])
+            {
+                Console.WriteLine(numbers[i]);
+                break;
+            }
+            else if (numbers[i] == numbers[i + 1] && numbers[i + 1] == numbers[i + 2])
+            {
+                Console.WriteLine(numbers[i]);
+                break;
+            }
+            else
+            {
+                Console.WriteLine(0);
+                break;
+            }
         }
     }
 }
