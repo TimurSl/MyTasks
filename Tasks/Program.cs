@@ -1,2 +1,2 @@
 ﻿using Tasks;
-Series.Main(args);
+Proc.Main(args);
