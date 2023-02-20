@@ -305,4 +305,140 @@ public class Proc
         double B = Math.Sqrt(A * A / 4 + H * H);
         return A + 2 * B;
     }
+    
+    public static int Proc21(int A, int B)
+    {
+        int sum = 0;
+        if (A > B)
+        {
+            return 0;
+        }
+        else
+        {
+            for (int i = A; i <= B; i++)
+            {
+                sum += i;
+            }
+            return sum;
+        }
+    }
+    
+    public static double Proc22(double A, double B, int Op)
+    {
+        switch (Op)
+        {
+            case 1:
+                return A - B;
+            case 2:
+                return A * B;
+            case 3:
+                return A / B;
+            default:
+                return A + B;
+        }
+    }
+    
+    public static int Proc23(double x, double y)
+    {
+        if (x > 0 && y > 0)
+        {
+            return 1;
+        }
+        else if (x < 0 && y > 0)
+        {
+            return 2;
+        }
+        else if (x < 0 && y < 0)
+        {
+            return 3;
+        }
+        else if (x > 0 && y < 0)
+        {
+            return 4;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    
+    public static bool Proc24(int K)
+    {
+        return K % 2 == 0;
+    }
+    
+    public static bool Proc25(int K)
+    {
+        return Math.Sqrt(K) % 1 == 0;
+    }
+    
+    public static bool Proc26(int K)
+    {
+        while (K > 1)
+        {
+            if (K % 5 != 0)
+            {
+                return false;
+            }
+            K /= 5;
+        }
+        return true;
+    }
+    
+    public static int Proc27(int N, int[] K)
+    {
+        int count = 0;
+        for (int i = 0; i < K.Length; i++)
+        {
+            if (Proc26(K[i]))
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+    
+    public static bool Proc28(int N)
+    {
+        if (N <= 1)
+        {
+            return false;
+        }
+        for (int i = 2; i < N; i++)
+        {
+            if (N % i == 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    public static int Proc29(int K)
+    {
+        int count = 0;
+        while (K > 0)
+        {
+            count++;
+            K /= 10;
+        }
+        return count;
+    }
+    
+    public static int Proc30(int K, int N)
+    {
+        int count = Proc29(K);
+        if (count < N)
+        {
+            return -1;
+        }
+        else
+        {
+            for (int i = 0; i < count - N; i++)
+            {
+                K /= 10;
+            }
+            return K % 10;
+        }
+    }
 }
