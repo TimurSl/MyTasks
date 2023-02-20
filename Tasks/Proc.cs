@@ -441,4 +441,122 @@ public class Proc
             return K % 10;
         }
     }
+    
+    public static bool Proc31(int K)
+    {
+        int count = Proc29(K);
+        for (int i = 0; i < count / 2; i++)
+        {
+            if (Proc30(K, i + 1) != Proc30(K, count - i))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    public static double Proc32(double D)
+    {
+        return D * Math.PI / 180;
+    }
+    
+    public static double Proc33(double R)
+    {
+        return R * 180 / Math.PI;
+    }
+    
+    public static double Proc34(int N)
+    {
+        double fact = 1;
+        for (int i = 1; i <= N; i++)
+        {
+            fact *= i;
+        }
+        return fact;
+    }
+    
+    public static double Proc35(int N)
+    {
+        double fact = 1;
+        for (int i = 2; i <= N; i += 2)
+        {
+            fact *= i;
+        }
+        return fact;
+    }
+    
+    public static int Proc36(int N)
+    {
+        if (N == 1 || N == 2)
+        {
+            return 1;
+        }
+        else
+        {
+            return Proc36(N - 1) + Proc36(N - 2);
+        }
+    }
+    public static double Proc37(double A, double B)
+    {
+        if (A <= 0)
+        {
+            return 0;
+        }
+        else
+        {
+            return Math.Exp(B * Math.Log(A));
+        }
+    }
+    
+    public static double Proc38(double A, int N)
+    {
+        if (N == 0)
+        {
+            return 1;
+        }
+        else if (N > 0)
+        {
+            double result = 1;
+            for (int i = 0; i < N; i++)
+            {
+                result *= A;
+            }
+            return result;
+        }
+        else
+        {
+            double result = 1;
+            for (int i = 0; i < -N; i++)
+            {
+                result *= A;
+            }
+            return 1 / result;
+        }
+    }
+    
+    public static double Proc39(double A, double B)
+    {
+        if (B % 1 == 0)
+        {
+            return Proc38(A, (int)B);
+        }
+        else
+        {
+            return Proc37(A, B);
+        }
+    }
+    
+    public static double Exp1(double x, double e)
+    {
+        double result = 1;
+        double summand = 1;
+        int n = 1;
+        while (Math.Abs(summand) > e)
+        {
+            summand *= x / n;
+            result += summand;
+            n++;
+        }
+        return result;
+    }
 }
