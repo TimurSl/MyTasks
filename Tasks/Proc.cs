@@ -559,4 +559,110 @@ public class Proc
         }
         return result;
     }
+    
+    public static double Proc41(double x, double e)
+    {
+        double result = 0;
+        double summand = x;
+        int n = 1;
+        while (Math.Abs(summand) > e)
+        {
+            result += summand;
+            summand *= -x * x / (2 * n * (2 * n + 1));
+            n++;
+        }
+        return result;
+    }
+    
+    public static double Proc42(double x, double e)
+    {
+        double result = 1;
+        double summand = 1;
+        int n = 1;
+        while (Math.Abs(summand) > e)
+        {
+            summand *= -x * x / (2 * n * (2 * n - 1));
+            result += summand;
+            n++;
+        }
+        return result;
+    }
+    
+    public static double Proc43(double x, double e)
+    {
+        double result = 0;
+        double summand = x;
+        int n = 1;
+        while (Math.Abs(summand) > e)
+        {
+            result += summand;
+            summand *= -x / (n + 1);
+            n++;
+        }
+        return result;
+    }
+    
+    public static double Proc44(double x, double e)
+    {
+        double result = 0;
+        double summand = x;
+        int n = 1;
+        while (Math.Abs(summand) > e)
+        {
+            result += summand;
+            summand *= -x * x / (2 * n * (2 * n - 1));
+            n++;
+        }
+        return result;
+    }
+    
+    public static double Proc45(double x, double a, double e)
+    {
+        double result = 1;
+        double summand = 1;
+        int n = 1;
+        while (Math.Abs(summand) > e)
+        {
+            summand *= a * x / n;
+            result += summand;
+            n++;
+        }
+        return result;
+    }
+    
+    public static int Proc46(int A, int B)
+    {
+        if (B == 0)
+        {
+            return A;
+        }
+        else
+        {
+            return Proc46(B, A % B);
+        }
+    }
+    
+    public static void Proc47(int A, int B, out int P, out int Q)
+    {
+        int nod = Proc46(A, B);
+        P = A / nod;
+        Q = B / nod;
+    }
+    
+    public static int Proc48(int A, int B)
+    {
+        return A * B / Proc46(A, B);
+    }
+    
+    public static int Proc49(int A, int B, int C)
+    {
+        return Proc46(Proc46(A, B), C);
+    }
+    
+    public static void Proc50(int T, out int H, out int M, out int S)
+    {
+        H = T / 3600;
+        M = (T - H * 3600) / 60;
+        S = T - H * 3600 - M * 60;
+    }
 }
