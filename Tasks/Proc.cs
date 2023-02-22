@@ -130,8 +130,224 @@ public class Proc
         double H = 2;
         Console.WriteLine(Proc20(A, H));
         
+        Console.WriteLine("---Proc21---");
+        int a1 = 1;
+        int b1 = 2;
+        Console.WriteLine(Proc21(a1, b1));
         
-
+        
+        Console.WriteLine("---Proc22---");
+        double a2 = 1;
+        double b2 = 2;
+        int Op1 = 1;
+        Console.WriteLine(Proc22(a2, b2, Op1));
+        
+        Console.WriteLine("---Proc23---");
+        double a3 = 1;
+        double b3 = 2;
+        int Op2 = 1;
+        Console.WriteLine(Proc23(a3, b3));
+        
+        Console.WriteLine("---Proc24---");
+        int a4 = 1;
+        Console.WriteLine(Proc24(a4));
+        
+        Console.WriteLine("---Proc25---");
+        int a5 = 1;
+        Console.WriteLine(Proc25(a5));
+        
+        Console.WriteLine("---Proc26---");
+        int a6 = 1;
+        Console.WriteLine(Proc26(a6));
+        
+        Console.WriteLine("---Proc27---");
+        int a7 = 1;
+        int b7 = 2;
+        Console.WriteLine(Proc27(a7, new []{ b7 }));
+        
+        Console.WriteLine("---Proc28---");
+        int a8 = 1;
+        Console.WriteLine(Proc28(a8));
+        
+        Console.WriteLine("---Proc29---");
+        int a9 = 1;
+        Console.WriteLine(Proc29(a9));
+        
+        Console.WriteLine("---Proc30---");
+        int a10 = 1;
+        int b10 = 2;
+        Console.WriteLine(Proc30(a10, b10));
+        
+        Console.WriteLine("---Proc31---");
+        int a11 = 1;
+        Console.WriteLine(Proc31(a11));
+        
+        Console.WriteLine("---Proc32---");
+        int a12 = 1;
+        Console.WriteLine(Proc32(a12));
+        
+        Console.WriteLine("---Proc33---");
+        int a13 = 4;
+        Console.WriteLine(Proc33(a13));
+        
+        Console.WriteLine("---Proc34---");
+        int a14 = 5;
+        Console.WriteLine(Proc34(a14));
+        
+        Console.WriteLine("---Proc35---");
+        int a15 = 6;
+        Console.WriteLine(Proc35(a15));
+        
+        Console.WriteLine("---Proc36---");
+        int a16 = 7;
+        Console.WriteLine(Proc36(a16));
+        
+        Console.WriteLine("---Proc37---");
+        double a17 = 8;
+        double b17 = 9;
+        Console.WriteLine(Proc37(a17, b17));
+        
+        Console.WriteLine("---Proc38---");
+        double a18 = 10;
+        int b18 = 11;
+        Console.WriteLine(Proc38(a18, b18));
+        
+        Console.WriteLine("---Proc39---");
+        double a19 = 12;
+        int b19 = 13;
+        Console.WriteLine(Proc39(a19, b19));
+        
+        Console.WriteLine("---Proc40---");
+        double a20 = 14;
+        int b20 = 15;
+        Console.WriteLine(Proc40(a20, b20));
+        
+        Console.WriteLine("---Proc41---");
+        double a21 = 16;
+        int b21 = 17;
+        Console.WriteLine(Proc41(a21, b21));
+        
+        Console.WriteLine("---Proc42---");
+        double a22 = 18;
+        int b22 = 19;
+        Console.WriteLine(Proc42(a22, b22));
+        
+        Console.WriteLine("---Proc43---");
+        double a23 = 20;
+        int b23 = 21;
+        Console.WriteLine(Proc43(a23, b23));
+        
+        Console.WriteLine("---Proc44---");
+        double a24 = 22;
+        int b24 = 23;
+        Console.WriteLine(Proc44(a24, b24));
+        
+        Console.WriteLine("---Proc45---");
+        double a25 = 24;
+        double b25 = 25;
+        double c25 = 26;
+        Console.WriteLine(Proc45(a25, b25, c25));
+        
+        Console.WriteLine("---Proc46---");
+        int a26 = 27;
+        int b26 = 28;
+        Console.WriteLine(Proc46(a26, b26));
+        
+        Console.WriteLine("---Proc47---");
+        int a27 = 29;
+        int b27 = 30;
+        int c27 = 31;
+        int d27 = 32;
+        Proc47(a27, b27, out c27, out d27);
+        Console.WriteLine(c27 + " " + d27);
+        
+        Console.WriteLine("---Proc48---");
+        int a28 = 33;
+        int b28 = 34;
+        Console.WriteLine(Proc48(a28, b28));
+        
+        Console.WriteLine("---Proc49---");
+        int a29 = 35;
+        int b29 = 36;
+        int c29 = 37;
+        Console.WriteLine(Proc49(a29, b29, c29));
+        
+        Console.WriteLine("---Proc50---");
+        int t30 = 38;
+        int h30, m30, s30;
+        Proc50(t30, out h30, out m30, out s30);
+        Console.WriteLine(h30 + " " + m30 + " " + s30);
+        
+        Console.WriteLine("---Proc51---");
+        int h31 = 39;
+        int t31 = 40, m31 = 41, s31 = 42;
+        Proc51(H: ref h31, ref m31, ref s31, t31);
+        Console.WriteLine(h31 + " " + m31 + " " + s31 + " " + t31);
+        
+        Console.WriteLine("---Proc52---");
+        int a32 = 43;
+        Console.WriteLine(Proc52(a32));
+        
+        Console.WriteLine("---Proc53---");
+        int m33 = 44;
+        int y33 = 45;
+        Console.WriteLine(Proc53(m33, y33));
+        
+        Console.WriteLine("---Proc54---");
+        int d34 = 46;
+        int m34 = 47;
+        int y34 = 48;
+        Proc54(ref d34, ref m34, ref y34);
+        Console.WriteLine(d34 + " " + m34 + " " + y34);
+        
+        Console.WriteLine("---Proc55---");
+        Proc55();
+        
+        Console.WriteLine("---Proc56---");
+        double xA36 = 49;
+        double yA36 = 50;
+        double xB36 = 51;
+        double yB36 = 52;
+        Console.WriteLine(Proc56(xA36, yA36, xB36, yB36));
+        
+        Console.WriteLine("---Proc57---");
+        double xA37 = 53;
+        double yA37 = 54;
+        double xB37 = 55;
+        double yB37 = 56;
+        double xC37 = 57;
+        double yC37 = 58;
+        Console.WriteLine(Proc57(xA37, yA37, xB37, yB37, xC37, yC37));
+        
+        Console.WriteLine("---Proc58---");
+        double xA38 = 59;
+        double yA38 = 60;
+        double xB38 = 61;
+        double yB38 = 62;
+        double xC38 = 63;
+        double yC38 = 64;
+        Console.WriteLine(Proc58(xA38, yA38, xB38, yB38, xC38, yC38));
+        
+        Console.WriteLine("---Proc59---");
+        double xA39 = 65;
+        double yA39 = 66;
+        double xB39 = 67;
+        double yB39 = 68;
+        double xC39 = 69;
+        double yC39 = 70;
+        Console.WriteLine(Proc59(xA39, yA39, xB39, yB39, xC39, yC39));
+        
+        Console.WriteLine("---Proc60---");
+        double xA40 = 71;
+        double yA40 = 72;
+        double xB40 = 73;
+        double yB40 = 74;
+        double xC40 = 75;
+        double yC40 = 76;
+        double hA40, hB40, hC40;
+        Proc60(xA40, yA40, xB40, yB40, xC40, yC40, out hA40, out hB40, out hC40);
+        Console.WriteLine(hA40 + " " + hB40 + " " + hC40);
+        
     }
     
     public static void Proc1(double A, out double B)
@@ -665,4 +881,105 @@ public class Proc
         M = (T - H * 3600) / 60;
         S = T - H * 3600 - M * 60;
     }
+    
+    public static void Proc51(ref int H, ref int M, ref int S, int T)
+    {
+        int time = H * 3600 + M * 60 + S + T;
+        Proc50(time, out H, out M, out S);
+    }
+    
+    public static bool Proc52(int Y)
+    {
+        if (Y % 4 == 0 && Y % 100 != 0 || Y % 400 == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    public static int Proc53(int M, int Y)
+    {
+        if (M == 2)
+        {
+            if (Proc52(Y))
+            {
+                return 29;
+            }
+            else
+            {
+                return 28;
+            }
+        }
+        else if (M == 4 || M == 6 || M == 9 || M == 11)
+        {
+            return 30;
+        }
+        else
+        {
+            return 31;
+        }
+    }
+    
+    public static void Proc54(ref int D, ref int M, ref int Y)
+    {
+        if (D == 1)
+        {
+            if (M == 1)
+            {
+                D = 31;
+                M = 12;
+                Y--;
+            }
+            else
+            {
+                D = Proc53(M - 1, Y);
+                M--;
+            }
+        }
+        else
+        {
+            D--;
+        }
+    }
+    
+    public static void Proc55()
+    {
+        int D = 1;
+        int M = 1;
+        int Y = 1;
+        Proc54(ref D, ref M, ref Y);
+        Console.WriteLine($"{D}.{M}.{Y}");
+    }
+    
+    public static double Proc56(double xA, double yA, double xB, double yB)
+    {
+        return Math.Sqrt(Math.Pow(xA - xB, 2) + Math.Pow(yA - yB, 2));
+    }
+    
+    public static double Proc57(double xA, double yA, double xB, double yB, double xC, double yC)
+    {
+        return Proc56(xA, yA, xB, yB) + Proc56(xB, yB, xC, yC) + Proc56(xC, yC, xA, yA);
+    }
+    
+    public static double Proc58(double xA, double yA, double xB, double yB, double xC, double yC)
+    {
+        double p = Proc57(xA, yA, xB, yB, xC, yC) / 2;
+        return Math.Sqrt(p * (p - Proc56(xA, yA, xB, yB)) * (p - Proc56(xA, yA, xC, yC)) * (p - Proc56(xB, yB, xC, yC)));
+    }
+    
+    public static double Proc59(double xP, double yP, double xA, double yA, double xB, double yB)
+    {
+        return 2 * Proc58(xP, yP, xA, yA, xB, yB) / Proc56(xA, yA, xB, yB);
+    }
+    
+    public static void Proc60(double xA, double yA, double xB, double yB, double xC, double yC, out double hA, out double hB, out double hC)
+    {
+        hA = Proc59(xA, yA, xB, yB, xC, yC);
+        hB = Proc59(xB, yB, xA, yA, xC, yC);
+        hC = Proc59(xC, yC, xA, yA, xB, yB);
+    }
+
 }
