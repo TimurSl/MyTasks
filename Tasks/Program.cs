@@ -1,2 +1,2 @@
 ﻿using Tasks;
-Proc.Main(args);
+Minmax.Main(args);
