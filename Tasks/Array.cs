@@ -14,6 +14,16 @@ public class Array
         Console.WriteLine(ArrayToString(Array8(Array1(10))));
         Console.WriteLine(ArrayToString(Array9(Array1(10))));
         Console.WriteLine(ArrayToString(Array10(Array1(10))));
+        Console.WriteLine(ArrayToString(Array11(Array1(10), 10)));
+        Console.WriteLine(ArrayToString(Array12(Array1(10))));
+        Console.WriteLine(ArrayToString(Array13(Array1(10))));
+        Console.WriteLine(ArrayToString(Array14(Array1(10))));
+        Console.WriteLine(ArrayToString(Array15(Array1(10))));
+        Console.WriteLine(ArrayToString(Array16(Array1(10))));
+        Console.WriteLine(ArrayToString(Array17(Array1(10))));
+        Console.WriteLine(Array18(Array1(10)));
+        Console.WriteLine(Array19(Array1(10)));
+        Console.WriteLine(Array20(Array1(10), 5, 10));
     }
     
     public static string ArrayToString(int[] array)
@@ -188,5 +198,149 @@ public class Array
         return array4;
     }
     
+    public static int[] Array11(int[] array, int k)
+    {
+        int[] array2 = new int[array.Length / k];
+        for (int i = 0; i < array2.Length; i++)
+        {
+            array2[i] = array[i * k];
+        }
+        return array2;
+    }
     
+    public static int[] Array12(int[] array)
+    {
+        int[] array2 = new int[array.Length / 2];
+        for (int i = 0; i < array2.Length; i++)
+        {
+            array2[i] = array[i * 2];
+        }
+        return array2;
+    }
+    
+    public static int[] Array13(int[] array)
+    {
+        int[] array2 = new int[array.Length / 2 + 1];
+        for (int i = 0; i < array2.Length; i++)
+        {
+            array2[i] = array[array.Length - i * 2 - 1];
+        }
+        return array2;
+    }
+    
+    public static int[] Array14(int[] array)
+    {
+        int[] array2 = new int[array.Length / 2];
+        int[] array3 = new int[array.Length / 2 + 1];
+        for (int i = 0; i < array2.Length; i++)
+        {
+            array2[i] = array[i * 2];
+        }
+        for (int i = 0; i < array3.Length; i++)
+        {
+            array3[i] = array[array.Length - i * 2 - 1];
+        }
+        int[] array4 = new int[array.Length];
+        for (int i = 0; i < array2.Length; i++)
+        {
+            array4[i] = array2[i];
+        }
+        for (int i = 0; i < array3.Length; i++)
+        {
+            array4[i + array2.Length] = array3[i];
+        }
+        return array4;
+    }
+    
+    public static int[] Array15(int[] array)
+    {
+        int[] array2 = new int[array.Length / 2];
+        int[] array3 = new int[array.Length / 2 + 1];
+        for (int i = 0; i < array2.Length; i++)
+        {
+            array2[i] = array[i * 2];
+        }
+        for (int i = 0; i < array3.Length; i++)
+        {
+            array3[i] = array[array.Length - i * 2 - 1];
+        }
+        int[] array4 = new int[array.Length];
+        for (int i = 0; i < array2.Length; i++)
+        {
+            array4[i] = array2[i];
+        }
+        for (int i = 0; i < array3.Length; i++)
+        {
+            array4[i + array2.Length] = array3[i];
+        }
+        return array4;
+    }
+    
+    public static int[] Array16(int[] array)
+    {
+        int[] array2 = new int[array.Length];
+        for (int i = 0; i < array.Length / 2; i++)
+        {
+            array2[i * 2] = array[i];
+            array2[i * 2 + 1] = array[array.Length - i - 1];
+        }
+        if (array.Length % 2 != 0)
+        {
+            array2[array.Length - 1] = array[array.Length / 2];
+        }
+        return array2;
+    }
+    
+    public static int[] Array17(int[] array)
+    {
+        int[] array2 = new int[array.Length];
+        for (int i = 0; i < array.Length / 2; i++)
+        {
+            array2[i * 2] = array[i];
+            array2[i * 2 + 1] = array[array.Length - i - 1];
+        }
+        if (array.Length % 2 != 0)
+        {
+            array2[array.Length - 1] = array[array.Length / 2];
+        }
+        return array2;
+    }
+    
+    public static int Array18(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] < array[array.Length - 1])
+            {
+                k = array[i];
+                break;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array19(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] > array[0] && array[i] < array[array.Length - 1])
+            {
+                k = i;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array20(int[] array, int k, int l)
+    {
+        int sum = 0;
+        for (int i = k - 1; i < l; i++)
+        {
+            sum += array[i];
+        }
+        return sum;
+    }
+ 
 }
