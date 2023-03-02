@@ -1,2 +1,2 @@
 ﻿using Tasks;
-Minmax.Main(args);
+Tasks.Array.Main(args);
