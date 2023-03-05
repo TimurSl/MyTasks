@@ -34,6 +34,26 @@ public class Array
         Console.WriteLine(Array28(Array1(10)));
         Console.WriteLine(Array29(Array1(10)));
         Console.WriteLine(Array30(Array1(10)));
+        Console.WriteLine(Array31(Array1(10)));
+        Console.WriteLine(Array32(Array1(10)));
+        Console.WriteLine(Array33(Array1(10)));
+        Console.WriteLine(Array34(Array1(10)));
+        Console.WriteLine(Array35(Array1(10)));
+        Console.WriteLine(Array36(Array1(10)));
+        Console.WriteLine(Array37(Array1(10)));
+        Console.WriteLine(Array38(Array1(10)));
+        Console.WriteLine(Array39(Array1(10)));
+        Console.WriteLine(Array40(Array1(10), 5));
+        Console.WriteLine(Array41(Array1(10)));
+        Console.WriteLine(Array42(Array1(10), 6));
+        Console.WriteLine(Array43(Array1(10)));
+        Console.WriteLine(Array44(Array1(10)));
+        Console.WriteLine(Array45(Array1(10)));
+        Console.WriteLine(Array46(Array1(10)));
+        Console.WriteLine(Array47(Array1(10)));
+        Console.WriteLine(Array48(Array1(10)));
+        Console.WriteLine(Array49(Array1(10)));
+        Console.WriteLine(Array50(Array1(10)));
     }
     
     public static string ArrayToString(int[] array)
@@ -497,6 +517,300 @@ public class Array
             if (array[i] > array[i + 1])
             {
                 k++;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array31(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i > 0)
+            {
+                if (array[i] > array[i - 1])
+                {
+                    k++;
+                }
+            }
+        }
+        return k;
+    }
+    
+    public static int Array32(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i > 0 && i < array.Length - 1)
+            {
+                if (array[i] < array[i - 1] && array[i] < array[i + 1])
+                {
+                    k = i + 1;
+                    break;
+                }
+            }
+        }
+        return k;
+    }
+    
+    public static int Array33(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i > 0 && i < array.Length - 1)
+            {
+                if (array[i] > array[i - 1] && array[i] > array[i + 1])
+                {
+                    k = i + 1;
+                }
+            }
+        }
+        return k;
+    }
+    
+    public static int Array34(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i > 0 && i < array.Length - 1)
+            {
+                if (array[i] < array[i - 1] && array[i] < array[i + 1])
+                {
+                    if (array[i] > k)
+                    {
+                        k = array[i];
+                    }
+                }
+            }
+        }
+        return k;
+    }
+    
+    public static int Array35(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i > 0 && i < array.Length - 1)
+            {
+                if (array[i] > array[i - 1] && array[i] > array[i + 1])
+                {
+                    if (array[i] < k)
+                    {
+                        k = array[i];
+                    }
+                }
+            }
+        }
+        return k;
+    }
+    
+    public static int Array36(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i > 0 && i < array.Length - 1)
+            {
+                if (array[i] > array[i - 1] && array[i] > array[i + 1])
+                {
+                    if (array[i] > k)
+                    {
+                        k = array[i];
+                    }
+                }
+            }
+        }
+        return k;
+    }
+    
+    public static int Array37(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            if (array[i] < array[i + 1])
+            {
+                k++;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array38(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            if (array[i] > array[i + 1])
+            {
+                k++;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array39(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            if (array[i] < array[i + 1])
+            {
+                k++;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array40(int[] array, int r)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (Math.Abs(array[i] - r) < Math.Abs(array[k] - r))
+            {
+                k = i;
+            }
+        }
+        return array[k];
+    }
+    
+    public static int Array41(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            if (array[i] + array[i + 1] > array[k] + array[k + 1])
+            {
+                k = i;
+            }
+        }
+        return k;
+    }
+
+    public static int Array42(int[] array, int r)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            if (Math.Abs(array[i] + array[i + 1] - r) < Math.Abs(array[k] + array[k + 1] - r))
+            {
+                k = i;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array43(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            if (array[i] != array[i + 1])
+            {
+                k++;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array44(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            if (array[i] == array[i + 1])
+            {
+                k = i;
+                break;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array45(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            if (Math.Abs(array[i] - array[i + 1]) < Math.Abs(array[k] - array[k + 1]))
+            {
+                k = i;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array46(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            if (array[i] == array[i + 1])
+            {
+                k = i;
+                break;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array47(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            if (array[i] != array[i + 1])
+            {
+                k++;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array48(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            if (array[i] == array[i + 1])
+            {
+                k++;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array49(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] != i + 1)
+            {
+                k = i + 1;
+                break;
+            }
+        }
+        return k;
+    }
+    
+    public static int Array50(int[] array)
+    {
+        int k = 0;
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            for (int j = i + 1; j < array.Length; j++)
+            {
+                if (array[i] > array[j])
+                {
+                    k++;
+                }
             }
         }
         return k;
